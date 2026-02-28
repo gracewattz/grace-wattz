@@ -1,124 +1,75 @@
 export const resumeData = {
   name: "Grace Wattz",
-  title: "Operations & Strategy | Startup Builder",
-  tagline: "Recent grad blending business strategy, entrepreneurship, and global experience to drive impactful ventures.",
+  title: "Startup Builder · Strategy & Operations",
   email: "gracewattz@gmail.com",
-  location: "Nairobi, Kenya / Global",
-  
-  education: [
-    {
-      school: "United States International University – Africa (USIU-Africa)",
-      degree: "Bachelor of Science in International Business Administration",
-      concentration: "Marketing",
-      period: "Jan 2021 – Dec 2024",
-      gpa: "3.52/4.0 (Cum Laude)",
-      highlights: [
-        "Dean's List (multiple semesters)",
-        "Relevant coursework: Digital Marketing, Consumer Behavior, International Marketing, Business Strategy, Entrepreneurship"
-      ]
-    }
-  ],
-
-  experience: [
-    {
-      role: "Co-Founder & COO",
-      company: "Brixit",
-      period: "Jul 2024 – Present",
-      location: "Nairobi, Kenya",
-      points: [
-        "Co-founded a brick-delivery logistics startup solving last-mile construction supply challenges",
-        "Built operations from scratch — supplier onboarding, delivery routing, customer acquisition",
-        "Developed pitch decks and financial models for investor outreach",
-        "Led market research across Nairobi's construction sector to validate demand"
-      ]
-    },
-    {
-      role: "Co-Founder",
-      company: "LikeaLocal",
-      period: "2023 – 2024",
-      location: "Nairobi, Kenya",
-      points: [
-        "Co-founded a travel-tech platform connecting tourists with authentic local experiences",
-        "Conducted user research and built the MVP feature set",
-        "Pitched at university entrepreneurship competitions"
-      ]
-    },
-    {
-      role: "Marketing Intern",
-      company: "Various Organizations",
-      period: "2022 – 2023",
-      location: "Nairobi, Kenya",
-      points: [
-        "Supported digital marketing campaigns, social media management, and content creation",
-        "Analyzed campaign performance metrics and provided optimization recommendations",
-        "Assisted with event planning and brand activation projects"
-      ]
-    }
-  ],
-
-  skills: {
-    business: ["Business Strategy", "Operations Management", "Market Research", "Financial Modeling", "Pitch Deck Development"],
-    marketing: ["Digital Marketing", "Social Media Strategy", "Content Creation", "Brand Development", "Campaign Analytics"],
-    technical: ["Microsoft Office Suite", "Google Workspace", "Canva", "Basic Data Analysis"],
-    languages: ["English (Native)", "Swahili (Conversational)"],
-    soft: ["Leadership", "Cross-cultural Communication", "Problem Solving", "Team Collaboration", "Public Speaking"]
-  },
+  location: "Boulder, CO",
+  calendly: "https://calendly.com/gracewattz",
+  resumeUrl: "/Grace_Wattz_Resume.pdf",
 
   projects: [
     {
-      name: "Brixit",
-      description: "Brick-delivery logistics startup solving last-mile supply chain challenges in Nairobi's construction industry.",
-      status: "Active",
-      tech: ["Operations", "Logistics", "Market Research"],
-      highlights: [
-        "Built supplier network across Nairobi",
-        "Developed routing optimization for deliveries",
-        "Created investor pitch materials and financial projections"
-      ]
+      name: "LikeALocal",
+      featured: true,
+      description:
+        "A vibe-coded travel discovery app that parses country-specific YouTube content in the native language, translates it into English, extracts hyper-local recommendations, and parses Reddit threads for real conversations — structuring everything into a usable, map-based discovery experience.",
+      role: "Built using Claude Code + VS Code. Designed product structure and UX flow. Integrated parsed YouTube + Reddit data. Iterated quickly using a vibe-coding workflow.",
+      positioning:
+        "Turning messy, culturally-specific content into structured, discoverable recommendations.",
+      tech: ["Claude Code", "VS Code", "YouTube API", "Reddit API"],
+      link: null,
     },
     {
-      name: "LikeaLocal",
-      description: "Travel-tech platform connecting tourists with curated local experiences for authentic cultural immersion.",
-      status: "Completed",
-      tech: ["Product Design", "User Research", "MVP Development"],
-      highlights: [
-        "Validated concept through user interviews",
-        "Built feature set for MVP launch",
-        "Pitched at university entrepreneurship events"
-      ]
-    }
+      name: "BrixIt",
+      description:
+        "A startup concept turned into a 60-page investor-ready pitch deck covering market research, business model, go-to-market strategy, and a full investor narrative — structured and refined for funding conversations.",
+      role: "Built the full investor narrative in Canva. Conducted market research. Developed business model and go-to-market strategy.",
+      tech: ["Canva", "Market Research", "Financial Modeling"],
+      link: null,
+      deckNote: "View Full Deck (60 slides)",
+    },
+    {
+      name: "Frat Maps",
+      description:
+        "A social discovery app designed to help college students quickly find what's happening around them through a map-first experience.",
+      role: "Conducted market research. Developed full product concept. Designed UI interface. Created logo and visual identity. Built and structured the pitch. Won a pitch competition. Led vision and execution (excluding backend code).",
+      tech: ["Product Design", "UI/UX", "Market Research", "Branding"],
+      link: "https://apps.apple.com/app/id1637663450",
+    },
+    {
+      name: "Video Editing & Story Building",
+      description:
+        "Story-driven visual projects focused on pacing, narrative clarity, and cohesion.",
+      role: "Designed and built a 40-page yearbook in Canva. Filmed and edited travel vlogs (Vietnam). Produced college recap videos.",
+      tech: ["Canva", "Final Cut Pro", "iMovie"],
+      link: null,
+    },
   ],
-
-  certifications: [
-    "Google Digital Marketing & E-Commerce Certificate",
-    "HubSpot Inbound Marketing Certification"
-  ],
-
-  interests: [
-    "Entrepreneurship & Startups",
-    "Travel & Cultural Exchange", 
-    "Sustainable Business",
-    "Technology & Innovation"
-  ]
 };
 
-// Chatbot knowledge base - flat facts for quick lookup
+// Chatbot knowledge base
 export const chatbotFacts: Record<string, string> = {
-  "name": "Grace Wattz",
-  "location": "Based in Nairobi, Kenya with global experience",
-  "education": "BS in International Business Administration (Marketing concentration) from USIU-Africa, graduated Cum Laude with a 3.52 GPA",
-  "gpa": "3.52 out of 4.0 — Cum Laude honors",
-  "current role": "Co-Founder & COO at Brixit, a brick-delivery logistics startup in Nairobi",
-  "brixit": "Brixit is a logistics startup Grace co-founded that solves last-mile brick delivery challenges in Nairobi's construction sector. She handles operations, supplier onboarding, delivery routing, and investor outreach.",
-  "likealocal": "LikeaLocal was a travel-tech platform Grace co-founded that connected tourists with authentic local experiences. She led user research and MVP development.",
-  "skills": "Business strategy, operations management, digital marketing, financial modeling, pitch decks, market research, and cross-cultural communication.",
-  "languages": "English (native) and Swahili (conversational)",
-  "certifications": "Google Digital Marketing & E-Commerce Certificate, and HubSpot Inbound Marketing Certification",
-  "interests": "Entrepreneurship, travel, sustainable business, and technology innovation",
-  "experience": "Grace has experience as a startup co-founder (Brixit, LikeaLocal) and marketing intern. She specializes in operations, strategy, and go-to-market execution.",
-  "marketing": "Experienced in digital marketing, social media strategy, content creation, brand development, and campaign analytics.",
-  "what makes her unique": "Grace combines international business education with hands-on entrepreneurship experience in East Africa. She's built startups from scratch, understands emerging market challenges, and bridges business strategy with operational execution.",
-  "contact": "You can reach Grace at gracewattz@gmail.com",
-  "school": "United States International University – Africa (USIU-Africa) in Nairobi",
-  "target roles": "Operations, strategy, startup building, and growth roles — especially in startups and entrepreneurial environments",
+  name: "Grace Wattz is a recent graduate from the University of Colorado Boulder, passionate about startups and early-stage building.",
+  education:
+    "Grace graduated from the University of Colorado Boulder with a focus on business and entrepreneurship. She also attended USIU-Africa in Nairobi, Kenya, earning a BS in International Business Administration with a Marketing concentration — Cum Laude, 3.52 GPA.",
+  likealocal:
+    "LikeALocal is a vibe-coded travel discovery app Grace built. It parses country-specific YouTube content in native languages, translates it into English, extracts hyper-local recommendations, and parses Reddit threads — structuring everything into a map-based discovery experience. She built it using Claude Code + VS Code, designed the product structure and UX flow, and iterated quickly using a vibe-coding workflow.",
+  brixit:
+    "BrixIt is a startup concept Grace developed into a 60-page investor-ready pitch deck. It covers market research, business model, go-to-market strategy, and a full investor narrative — structured and refined for funding conversations.",
+  fratmaps:
+    "Frat Maps is a social discovery app Grace helped build for college students to find what's happening around them through a map-first experience. She conducted market research, developed the full product concept, designed the UI and logo, built the pitch, and won a pitch competition. It's available on the App Store.",
+  "target roles":
+    "Grace is looking for roles in startups and early-stage companies — specifically in operations, strategy, and growth. She thrives in environments that blend strategy with execution.",
+  skills:
+    "Grace brings business strategy, operations management, digital marketing, financial modeling, pitch deck development, and product design skills. She's also proficient with tools like Canva, Final Cut Pro, Claude Code, and VS Code.",
+  experience:
+    "Grace has co-founded startups (BrixIt, LikeALocal), built investor-ready pitch decks, conducted extensive market research, and designed product experiences. She also has experience in digital marketing and content creation.",
+  contact:
+    "Grace can be reached at gracewattz@gmail.com or you can schedule a call through her Calendly at calendly.com/gracewattz.",
+  location: "Grace is based in Boulder, Colorado.",
+  travel:
+    "Grace solo traveled through Asia, demonstrating adaptability, independence, and initiative — qualities she brings to every project she works on.",
+  resume:
+    "You can download Grace's resume directly from the website — there's a download link on the homepage.",
+  "what makes her unique":
+    "Grace combines hands-on startup experience with strong strategic thinking. She's built products from concept to investor-ready stage, solo traveled through Asia, and brings a rare blend of execution ability and big-picture vision to early-stage teams.",
 };
