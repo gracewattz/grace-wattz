@@ -1,65 +1,45 @@
 import { motion } from "framer-motion";
-import { Mail, MapPin, Send } from "lucide-react";
+import { Mail } from "lucide-react";
 import { resumeData } from "@/data/resumeData";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-24 relative">
+    <section id="contact" className="py-24">
       <div className="container mx-auto px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16"
+          className="max-w-3xl mx-auto"
         >
-          <span className="text-sm font-mono text-primary mb-2 block">05 / Contact</span>
-          <h2 className="text-4xl font-bold">Let's Connect</h2>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-2xl"
-        >
-          <p className="text-muted-foreground mb-8 text-lg">
-            I'm currently open to new opportunities in operations, strategy, and startup roles. 
-            Whether you have a question or just want to say hi — my inbox is always open.
-          </p>
-
-          <div className="space-y-4 mb-10">
-            <a
-              href={`mailto:${resumeData.email}`}
-              className="flex items-center gap-4 glass rounded-xl p-5 hover:glow-border transition-shadow duration-300 group"
-            >
-              <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition">
-                <Mail size={18} className="text-primary" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Email</p>
-                <p className="font-medium">{resumeData.email}</p>
-              </div>
-              <Send size={16} className="text-muted-foreground ml-auto group-hover:text-primary transition-colors" />
-            </a>
-
-            <div className="flex items-center gap-4 glass rounded-xl p-5">
-              <div className="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center">
-                <MapPin size={18} className="text-accent" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Location</p>
-                <p className="font-medium">{resumeData.location}</p>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl font-bold mb-8 text-foreground">Contact</h2>
 
           <a
             href={`mailto:${resumeData.email}`}
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-primary text-primary-foreground font-medium hover:opacity-90 transition text-lg"
+            className="inline-flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors mb-12"
           >
-            Say Hello
-            <Send size={18} />
+            <Mail size={16} />
+            {resumeData.email}
           </a>
+
+          <div className="mt-8">
+            <h3 className="text-xl font-semibold text-foreground mb-2">Schedule a Call</h3>
+            <p className="text-sm text-muted-foreground mb-6">
+              Pick a time that works — shows only availability.
+            </p>
+
+            <div className="rounded-xl border border-border overflow-hidden">
+              <iframe
+                src="https://calendly.com/gracewattz?hide_gdpr_banner=1"
+                width="100%"
+                height="950"
+                frameBorder="0"
+                title="Schedule a call with Grace"
+                className="w-full"
+                style={{ minHeight: "950px" }}
+              />
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
