@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+
+    --card: 224 15% 5%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 224 15% 8%;
+    --popover-foreground: 0 0% 100%;
+
+    /* Electric blue #0047FF ≈ HSL 224 100% 50% */
+    --primary: 224 100% 50%;
+    --primary-foreground: 0 0% 0%;
+
+    --secondary: 224 15% 12%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 224 10% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 0 0% 100%;
+    --accent-foreground: 224 100% 50%;
+
+    --destructive: 0 72% 50%;
+    --destructive-foreground: 0 85% 97%;
+
+    --border: 224 20% 15%;
+    --input: 224 15% 12%;
+    --ring: 224 100% 50%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 224 15% 5%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 224 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 224 15% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 224 20% 15%;
+    --sidebar-ring: 224 100% 50%;
+    --chart-1: 224 100% 60%;
+    --chart-2: 200 90% 55%;
+    --chart-3: 260 80% 60%;
+    --chart-4: 180 70% 50%;
+    --chart-5: 0 0% 45%;
+    --sidebar: 224 15% 5%;
+    --font-sans: 'Roboto', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+    --font-serif: 'Libre Caslon Text', ui-serif, Georgia, Cambria, 'Times New Roman', Times, serif;
+    --font-mono: 'Roboto Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.3);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.3);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 1px 2px -1px hsl(0 0% 0% / 0.4);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 1px 2px -1px hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 4px 6px -1px hsl(0 0% 0% / 0.4);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 8px 10px -1px hsl(0 0% 0% / 0.4);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.5);
+    --tracking-normal: 0em;
+    --spacing: 0.25rem;
+  }
+
+  /* Keep .dark identical so any dark-mode toggle doesn't change the look */
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 224 15% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 224 15% 8%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 224 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 224 15% 12%;
+    --secondary-foreground: 0 0% 95%;
+    --muted: 224 10% 15%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 0 0% 100%;
+    --accent-foreground: 224 100% 50%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 85% 97%;
+    --border: 224 20% 15%;
+    --input: 224 15% 12%;
+    --ring: 224 100% 50%;
+    --chart-1: 224 100% 60%;
+    --chart-2: 200 90% 55%;
+    --chart-3: 260 80% 60%;
+    --chart-4: 180 70% 50%;
+    --chart-5: 0 0% 45%;
+    --sidebar: 224 15% 5%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 224 100% 50%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 224 15% 12%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 224 20% 15%;
+    --sidebar-ring: 224 100% 50%;
+    --shadow-2xs: 0 1px 3px 0px hsl(0 0% 0% / 0.3);
+    --shadow-xs: 0 1px 3px 0px hsl(0 0% 0% / 0.3);
+    --shadow-sm: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 1px 2px -1px hsl(0 0% 0% / 0.4);
+    --shadow: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 1px 2px -1px hsl(0 0% 0% / 0.4);
+    --shadow-md: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 2px 4px -1px hsl(0 0% 0% / 0.4);
+    --shadow-lg: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 4px 6px -1px hsl(0 0% 0% / 0.4);
+    --shadow-xl: 0 1px 3px 0px hsl(0 0% 0% / 0.4), 0 8px 10px -1px hsl(0 0% 0% / 0.4);
+    --shadow-2xl: 0 1px 3px 0px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    @apply tracking-tight;
+  }
+
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  .text-blue {
+    color: hsl(var(--primary));
+  }
+
+  /* Subtle electric-blue glow on text */
+  .text-glow {
+    text-shadow:
+      0 0 12px hsl(224 100% 65% / 0.7),
+      0 0 28px hsl(224 100% 65% / 0.4),
+      0 0 60px hsl(224 100% 65% / 0.2);
+  }
+
+  /* Subtle electric-blue glow on borders / boxes */
+  .glow-border {
+    box-shadow:
+      0 0 12px hsl(224 100% 50% / 0.45),
+      0 0 28px hsl(224 100% 50% / 0.25),
+      0 0 55px hsl(224 100% 50% / 0.12);
+  }
+
+  /* Even softer ambient glow for the promo background area */
+  .promo-glow {
+    box-shadow:
+      0 0 50px hsl(224 100% 50% / 0.18),
+      0 0 100px hsl(224 100% 50% / 0.08);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.6);
+}
